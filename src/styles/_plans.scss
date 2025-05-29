@@ -40,6 +40,7 @@
             img {
                 height: 120px;
                 
+                
             @media (max-width: 768px) {
                 width: 100%;
             }
@@ -47,7 +48,9 @@
             }
 
             .max_img {
-                width: 100%;
+                height: 120px;
+                width: 340px;
+                max-width: 366.25px;
             }
 
             .price {
