@@ -355,7 +355,6 @@ section {
     width: 100%;
     max-width: 100%;
     color: #dcdcdc;
-    /* padding: 24px 0; */
     justify-content: space-between;
     grid-template-columns: repeat(2, 1fr);
     box-sizing: border-box;
@@ -434,15 +433,21 @@ section p {
     list-style-type: none;
     @media (max-width: 768px) {
         width: 100%;
+        padding: 0.3em;
     }
 }
 .productsDisplay nav {
     background-color: #290218;
     height: 90px;
     margin: -10px;
-    padding: 10px;
+    padding: 15px;
     justify-content: center;
     align-items: center;
+    @media (max-width: 768px) {
+        height: 4em;
+        display: flex;
+        padding: 0;
+    }
 }
 .productsDisplay nav p {
     text-align: center;
@@ -455,18 +460,39 @@ section p {
 
 .productsDisplay img{
     height: 150px;
+
 }
 
 .productsDisplay ul {
     display: grid;
     margin-top: 11px;
-    grid-template-columns: repeat(3, 1fr);
     box-sizing: border-box;
+    grid-template-columns: repeat(3, 1fr);
     @media (max-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
+        max-height: 34.1em;
+        overflow-y: auto;
     }
 }
-
+.productsDisplay li div button {
+    background-color: #540a13;
+    border: #290218 1px solid;
+    color: #db2e42;
+    width: 100%;
+    margin-left: 2px ;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    @media (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+}
+.productsDisplay li div button:hover {
+    background-color: #db2e42;
+    color: #540a13;
+    cursor: pointer;
+}
 .productsDisplay li {
     flex-direction: row;
     display: flex;
@@ -486,6 +512,10 @@ section p {
     box-sizing: border-box;
     height: 160px;
     cursor: pointer;
+    @media (max-width: 768px) {
+        width: 9em;
+        max-height: fit-content;
+    }
 }
 .productsDisplay li h4 {
     font-weight: 800px;
@@ -495,6 +525,9 @@ section p {
     color:#db2e42;
     margin-top: 10px;
     margin-bottom: 10px;
+    @media (max-width: 768px) {
+        font-size: 1em;
+    }
 }
 
 .productsDisplay li p {
@@ -502,12 +535,18 @@ section p {
     font-size: 15px;
     font-weight: 600px;
     margin-top: -10px;
+    @media (max-width: 768px) {
+        font-size: 0.8em;
+    }
 }
-.productsDisplay h5 {
+.productsDisplay b {
     margin: 10px;
     font-size: 20px;
     color: gold;
     background-color: #17141463;
+    @media (max-width: 768px) {
+        font-size: 15px;
+    }
 }
 
 .showmore h6 {
@@ -536,20 +575,25 @@ section p {
 .social_links li {
     margin-right: 8px;
     list-style: none;
+    width: 300px;
+    @media (max-width: 768px) {
+     width: auto;   
+    }
 }
 .nomargintop {
     padding-top: 0;
 }
-
 
 .social_links li a {
     text-decoration: none;
     margin-right: 8px;
 }
 
-.endsection {
+section.endsection {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1em;
+
 }
 .endsection h2 {
     margin-bottom: 10px;
@@ -557,13 +601,24 @@ section p {
 #contact .container {
     display: flex;
 }
-
+.divduplasocial {
+    display: flex;
+    gap: 5em;
+    @media (max-width: 768px) {
+        display: block;
+        gap: inherit;
+    }
+}
 .contact_methods {
     display: flex;
     justify-content: space-between;
     background-color: #aeacacab;
     border: 1px solid #101010;
     padding: 10px;
+
+    @media (max-width: 600px) {
+        display: block;
+    }
 }
 
 
@@ -571,10 +626,18 @@ form input,
 form textarea,
 form button {
     display: block;
-    width: 320px;
+    width: 25em;
     margin-bottom: 8px;
     padding: 8px;
     font-weight: 500;
+    @media (max-width: 600px) {
+        width: 80vw;
+    }
+}
+.formdiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 form textarea {
@@ -595,6 +658,7 @@ section h3 {
     margin-bottom: 16px;
     color: #010101;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 
@@ -614,11 +678,14 @@ form button:hover {
     height: 40px;
 }
 .divAddres {
-    margin-top: 2em;
+    width: 300px;
+    @media (max-width: 768px) {
+        margin-top: 2em;
+        width: auto;    
+    }
 }
 .endsection div h2{
     font-size: 40px;
-    margin-bottom: 0;
 }
 .endereco {
     color:#010101;
@@ -631,4 +698,10 @@ footer {
     color: #f8f8ff;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);  
     padding: 12px 0;
+    @media (max-width: 768px) {
+        display: flex;
+        text-align: center;
+        font-size: 0.8em;   
+        width: 100vw;
+    }
 }
